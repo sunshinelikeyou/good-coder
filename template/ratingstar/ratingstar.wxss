@@ -1,0 +1,29 @@
+/* rating-star */
+ .rating-star image{
+   float: left;
+   width:20rpx;
+   height:20rpx;
+ } 
+
+
+/* rating-star-list */
+.rating-star-list{
+  width: 370rpx;
+}
+.rating-star-list image{
+  float:right;
+  width:12rpx;
+  height:12rpx;
+  margin-right:2rpx;
+}
+.rating-star-list progress{
+  float:right;
+  width: 280rpx;
+  margin-left: 8rpx;
+  margin-bottom: 4rpx;
+}
+.rating-star-image{
+  float:left;
+  width: 80rpx;
+  margin-bottom: 4rpx;
+}

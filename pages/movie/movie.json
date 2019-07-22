@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "my-searchbar":"/components/searchbar/searchbar",
+    "my-showmovies": "/components/showmovies/showmovies"
+     },
+    "navigationBarTitleText": "Movie"
+    
+}

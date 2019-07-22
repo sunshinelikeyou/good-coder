@@ -1,0 +1,3 @@
+
+<movie-detail  movie = "{{movie}}" />
+<movie-rating movie="{{movie}}"/>

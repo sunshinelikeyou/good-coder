@@ -1,0 +1,19 @@
+<!--components/moviedetail/moviedetail.wxml-->
+<wxs module="tool" src="../../utils/tool.wxs"/>
+<view class='movie-detail'>
+   <view class='movie-header'>
+       <image  src='{{ movie.movieImgSrc }}'/>
+       <view class='movie-info'>
+          <view class='movie-title'>{{ movie.title }}</view>
+          <view class='movie-originalTitle'>{{ movie.originalTitle }}</view>
+          <view class='movie-detail-info'>
+          <text class='movie-countries' wx:for="{{ movie.countries}}" wx:key="index">{{ tool.stringEndWith(item) }}</text>
+          <text class='movie-genres' wx:for="{{ movie.genres  }}" wx:key="index">{{ tool.stringEndWith(item)  }}</text>
+          <text class='movie-pubdates' wx:for="{{ movie.pubdates }}" wx:key="index">上映时间: {{ tool.stringEndWith(item) }}</text> 
+          <text class='movie-durations'>片长: {{ movie.durations }}</text> 
+            </view>
+          <image src='/image/want-watch.png'></image>
+          <image src='/image/watched.png'></image>
+       </view>
+   </view>
+</view>

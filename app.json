@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/notes/notes",
+    "pages/issue/issue",
+    "pages/movie/movie",
+    "pages/user/user",
+    "pages/movie/movie-detail/movie-detail"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#28a745",
+    "navigationBarTitleText": "Notes",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+         "iconPath":"./image/home.png",
+         "selectedIconPath":"./image/home-active.png"
+      },
+      {
+        "pagePath": "pages/notes/notes",
+        "text": "Notes",
+        "iconPath": "./image/note.png",
+        "selectedIconPath": "./image/note-active.png"
+      },
+      {
+        "pagePath": "pages/issue/issue",
+        "text": "Issue",
+        "iconPath": "./image/issue.png",
+        "selectedIconPath": "./image/issue-active.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "Movie",
+        "iconPath": "./image/music.png",
+        "selectedIconPath": "./image/music-active.png"
+      },{
+        "pagePath": "pages/user/user",
+        "text": "User",
+        "iconPath": "./image/user.jpg",
+        "selectedIconPath": "./image/user-active.png"
+      }
+    ],
+    "color":"#6c757d",
+    "selectedColor":"#28a745"
+  }
+}

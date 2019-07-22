@@ -1,0 +1,26 @@
+@import "/template/ratingstar/ratingstar.wxss";
+.movie-rating{
+  padding: 12rpx 30rpx;
+}
+.rating-header{
+  height: 24rpx;
+}
+.rating-header image{
+  float:right;
+  width: 10rpx; 
+  height:20rpx;
+}
+.rating-header .rating-title{
+  float: left;
+  font-size: 24rpx;
+}
+.rating-header sup{
+   vertical-align: text-top;
+   font-size: 12rpx;
+}
+.rating-content-left{
+  float: left;
+}
+.rating-content-right{
+  float: right;
+}

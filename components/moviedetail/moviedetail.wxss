@@ -1,0 +1,35 @@
+.movie-detail{
+   padding: 24rpx 30rpx;
+}
+
+.movie-header image{
+  float: left;
+  width: 210rpx;
+  height: 300rpx;
+  border-radius: 8rpx;
+}
+.movie-header .movie-info{
+  float: left;
+  width: 450rpx;
+  height: 300rpx;
+  padding-left:30rpx;
+  padding-top: 12rpx;
+}
+.movie-info .movie-title{
+  font-size: 44rpx;
+  font-weight: bold;
+}
+.movie-info  .movie-originalTitle{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.movie-info  .movie-detail-info{
+  font-size: 20rpx;
+  word-break: break-all;
+}
+.movie-info image{
+  width: 170rpx;
+  height: 80rpx;
+  margin-top: 20rpx; 
+  margin-left: 20rpx;
+}

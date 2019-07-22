@@ -1,0 +1,23 @@
+<import src="/template/ratingstar/ratingstar.wxml" />
+
+<view class="movie-rating">
+  <view class='rating-header'>
+    <view class='rating-title'>豆瓣评分
+      <sup>TM</sup>
+    </view>
+    <image src='/image/arrow-right.png'></image>
+  </view>
+  <view class='rating-content'>
+    <view class='rating-content-left'>
+      <view class='rating-average'>{{movie.rating.average}}</view>
+      <view class='rating-average-star'>
+      <block wx:for='{{movie.dealStar}}'     wx:key="item">
+        <template is="rating-star"  data="{{item}}"/>
+      </block>
+      </view>
+    </view>
+    <view class='rating-content-right'>
+       <template is="rating-star-list" data="{{ movie }}"></template>
+    </view>
+  </view>
+</view>

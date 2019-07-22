@@ -1,0 +1,17 @@
+// wxs  暂时不支持es6 语法
+// 格式化字符串 parmas('字符串','截取的长度','超过部分以什么结尾' )
+var formatString = function(str, n, endMark)  {
+  var mark = endMark || '...'  
+  return str.length > n ? str.slice(0, n) + mark : str
+}
+// 给字符串尾部加 /
+var stringEndWith = function(str,endMark){
+  var mark = endMark || '/'
+  return str + mark;
+}
+
+
+module.exports = {
+  formatString: formatString,
+  stringEndWith: stringEndWith
+}
