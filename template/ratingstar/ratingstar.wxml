@@ -5,11 +5,11 @@
 </template>
 <template name="rating-star-list">
   <view class="rating-star-list">
-    <view wx:for="{{movie.rating.details}}" wx:key="index">
+    <view wx:for="{{rating.details}}" wx:key="index">
     <view class='rating-star-image'>
       <image src="/image/sch.png" wx:for="{{5 - (index - 1)}}" wx:key="index" />
     </view>
-      <progress percent="{{movie.dealDetails[index - 1]}}" color="#fea932" border-radius="2rpx" />
+      <progress percent="{{dealDetails[index - 1]}}" color="#fea932" border-radius="2rpx" />
     </view>
   </view>
 </template>

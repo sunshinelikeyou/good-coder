@@ -1,6 +1,14 @@
 @import "/template/ratingstar/ratingstar.wxss";
 .movie-rating{
-  padding: 12rpx 30rpx;
+  display:flex;
+  flex-direction:column;
+  margin: 12rpx 30rpx 0;
+  padding: 24rpx 32rpx 0;
+  clear:both;
+  background: #666;
+  border-radius: 14rpx;
+ 
+
 }
 .rating-header{
   height: 24rpx;
@@ -9,18 +17,42 @@
   float:right;
   width: 10rpx; 
   height:20rpx;
+  
 }
 .rating-header .rating-title{
   float: left;
   font-size: 24rpx;
+  color:white;
 }
 .rating-header sup{
    vertical-align: text-top;
    font-size: 12rpx;
 }
-.rating-content-left{
-  float: left;
+.rating-content{
+  display: flex;
+   padding:24rpx 30rpx 0;
+   border-bottom: 2px solid #eee;
 }
-.rating-content-right{
-  float: right;
+.rating-content-left{
+  margin-right:30rpx;
+}
+.rating-content-left .rating-average{
+   height: 44rpx;
+   line-height: 44rpx;
+   font-size: 44rpx;
+   text-align: center;
+   margin-bottom: 26rpx;
+   color: white;
+}
+.rating-content-right .rating-count{
+  float:right;
+  font-size: 14rpx;
+  line-height: 40rpx;
+  color:#eee;
+}
+.rating-footer{
+  font-size: 20rpx;
+  line-height: 50rpx;
+  color:#999;
+  text-align: right;
 }

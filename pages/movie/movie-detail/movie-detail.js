@@ -34,7 +34,9 @@ Page({
               pubdates:data.pubdates,
               durations:data.durations,
               dealStar:utils.dealStar(data.rating.stars),
-              dealDetails:utils.computeArrTotal(data.rating.details)
+              dealDetails:utils.computeArrTotal(data.rating.details),
+              ratingsCount:data.ratings_count,
+              collectCount:data.collect_count
            }
            this.setData({
              movie:temp

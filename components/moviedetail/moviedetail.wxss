@@ -16,11 +16,11 @@
   padding-top: 12rpx;
 }
 .movie-info .movie-title{
-  font-size: 44rpx;
+  font-size: 36rpx;
   font-weight: bold;
 }
 .movie-info  .movie-originalTitle{
-  font-size: 36rpx;
+  font-size: 28rpx;
   font-weight: bold;
 }
 .movie-info  .movie-detail-info{
