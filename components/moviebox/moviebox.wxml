@@ -1,0 +1,7 @@
+<wxs module="tool" src="../../utils/tool.wxs" />
+<view class='movie-box'>
+  <view class='movie' wx:for="{{movies }}" wx:key="item.id" bind:tap="movieDetail" data-id="{{item.id}}">
+    <image src="{{ item.images.small}}"></image>
+    <view class='title'>{{ tool.formatString(item.title,5) }}</view>
+  </view>
+</view>

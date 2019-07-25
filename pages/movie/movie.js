@@ -45,19 +45,22 @@ Page({
     this.http('正在热映', (res) => {
       // console.log(res)
       movies.push({
-        name: res.data.title,
-        data: res.data.subjects
+        name: '正在热映',
+        data: res.data.subjects,
+        categoryUrl:'in_theaters'
       });
       this.http('即将上映', (res) => {
         movies.push({
-          name: res.data.title,
-          data: res.data.subjects
+          name: '即将上映',
+          data: res.data.subjects,
+          categoryUrl:'coming_soon'
         });
         this.http('top250', (res) => {
           // console.log(res.data.subjects)
           movies.push({
-            name: res.data.title,
-            data: res.data.subjects
+            name: 'top250',
+            data: res.data.subjects,
+            categoryUrl: 'top250'
           });
            // 要用setData更新数据，页面才能正常渲染
           this.setData({
@@ -71,10 +74,20 @@ Page({
   // 携带当前电影id跳转电影详情页  
   movieDetail(e){
       // console.log(e.detail)
+      // 跳转成功后接受showmovie组件的传过来的movieId
     wx.navigateTo({
       url: "./movie-detail/movie-detail",
       success:function(res){
         res.eventChannel.emit('sendMovieId',{id:e.detail})
+      }
+    })
+  },
+  moreMovie(e){
+    // console.log(e.detail);
+    wx.navigateTo({
+      url: "./more-movie/more-movie",
+      success: function (res) {
+        res.eventChannel.emit('sendCategoryUrl', { category: e.detail })
       }
     })
   },

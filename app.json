@@ -5,7 +5,8 @@
     "pages/issue/issue",
     "pages/movie/movie",
     "pages/user/user",
-    "pages/movie/movie-detail/movie-detail"
+    "pages/movie/movie-detail/movie-detail",
+    "pages/movie/more-movie/more-movie"
 
   ],
   "window":{

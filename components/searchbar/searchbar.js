@@ -20,8 +20,12 @@ Page({
         });
     },
     inputTyping: function (e) {
+      const value = e.detail.value
         this.setData({
-            inputVal: e.detail.value
-        });
+            inputVal: value
+        }); 
+    },
+    sendMovie(e){
+      console.log(e);
     }
 });

@@ -1,22 +1,22 @@
 <!--components/showMovies/showMovies.wxml-->
-<wxs module="tool" src="../../utils/tool.wxs"/>
+<wxs module="tool" src="../../utils/tool.wxs" />
+<import src="/template/ratingstar/ratingstar.wxml" />
 <view class='movies'>
-        <view  wx:for="{{ movies }}" wx:for-item="movieItem" wx:key="movieItem.name">
-          <view class='header'>
-            <text class='category-title'>{{ movieItem.name }}</text>
-            <view class='more'>更多 <image src='/image/arrow-right.png'></image></view>
-          </view>
-           <view class='movie-box'>
-            <view class='movie'
-             wx:for="{{ movieItem.data }}" 
-             wx:key="item.id" 
-             bind:tap="movieDetail" 
-             data-id="{{item.id}}"
-             >
-              <image src="{{ item.images.small}}"></image>
-              <view class='title'>{{ tool.formatString(item.title,5) }}</view>
-            </view>
-           </view>
-        </view>
-          
+  <view wx:for="{{ movies }}" wx:for-item="movieItem" wx:key="movieItem.name">
+    <view class='header'>
+      <text class='category-title'>{{ movieItem.name }}</text>
+      <view class='more' bind:tap="moreMovie" data-category='{{ movieItem }}'>更多
+        <image src='/image/arrow-right.png'></image>
+      </view>
+    </view>
+    <view class='movie-box'>
+      <view class='movie' wx:for="{{ movieItem.data }}" wx:key="item.id" bind:tap="movieDetail" data-id="{{item.id}}">
+        <image src="{{ item.images.small}}"></image>
+        <view class='title' title="{{item.title}}">{{ tool.formatString(item.title,8) }}</view>
+      </view>
+    </view>
+   
+   
+  </view>
+
 </view>

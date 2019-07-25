@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-searchbar": "/components/searchbar/searchbar",
+    "movie-box": "/components/moviebox/moviebox"
+  },
+  "navigationBarTitleText": "More Movie"
+}
