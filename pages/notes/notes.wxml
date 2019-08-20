@@ -1,0 +1,1 @@
+<view bind:tap='call'>拨号</view>

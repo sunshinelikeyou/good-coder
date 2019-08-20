@@ -6,7 +6,7 @@ Component({
   properties: {
       movie:{
         type:Object,
-        value:{title:'您的数据请求有误！'}
+        value:{msg:'您的数据请求有误！'}
       }
   },
 

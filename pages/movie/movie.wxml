@@ -1,3 +1,3 @@
 
-<my-searchbar/>
+<my-searchbar bind:search="searchMovie"/>
 <my-showmovies movies="{{movies}}" bind:detail="movieDetail" bind:more="moreMovie"/>

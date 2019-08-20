@@ -48,6 +48,7 @@
       }
     ],
     "color":"#6c757d",
-    "selectedColor":"#28a745"
+    "selectedColor":"#28a745",
+    "backgroundColor":"#fff"
   }
 }

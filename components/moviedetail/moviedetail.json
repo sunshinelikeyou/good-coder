@@ -1,5 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "movie-rating": "/components/movierating/movierating"
+  }
  
 }

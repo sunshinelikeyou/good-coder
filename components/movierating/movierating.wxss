@@ -1,8 +1,8 @@
 @import "/template/ratingstar/ratingstar.wxss";
+
 .movie-rating{
   display:flex;
   flex-direction:column;
-  margin: 12rpx 30rpx 0;
   padding: 24rpx 32rpx 0;
   clear:both;
   background: #666;

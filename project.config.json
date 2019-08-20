@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.7.3",
 	"appid": "wxf8240002af6e116b",
-	"projectname": "notes",
+	"projectname": "myApp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

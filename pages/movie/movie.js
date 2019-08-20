@@ -40,6 +40,11 @@ Page({
     })
   },
   onLoad: function(options) {
+    // 显示消息提示框
+    wx.showLoading({
+      title: '加载中',
+    })
+    
     var movies = this.data.movies;
     //  按需求先后 请求数据 
     this.http('正在热映', (res) => {
@@ -65,9 +70,10 @@ Page({
            // 要用setData更新数据，页面才能正常渲染
           this.setData({
             movies: movies
-          })
+          });
+          wx.hideLoading()
         });
-        console.log(this.data.movies)
+        // console.log(this.data.movies)
       });
     });
   },
@@ -91,52 +97,12 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+  searchMovie(e){
+    wx.navigateTo({
+      url: "./movie-detail/movie-detail",
+      success: function (res) {
+        res.eventChannel.emit('sendMovieInfo', { value: e.detail })
+      }
+    })
   }
 })

@@ -1,5 +1,6 @@
 <!--components/showMovies/showMovies.wxml-->
 <wxs module="tool" src="../../utils/tool.wxs" />
+<!-- 展示电影组件 -->
 <import src="/template/ratingstar/ratingstar.wxml" />
 <view class='movies'>
   <view wx:for="{{ movies }}" wx:for-item="movieItem" wx:key="movieItem.name">

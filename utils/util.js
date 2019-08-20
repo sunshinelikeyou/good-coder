@@ -1,3 +1,6 @@
+const  appSecret = '3ccf54b5e3f520e5072cfc31d45c0a05';
+const appId = 'wxf8240002af6e116b';
+const access_token = '24_O3iDrDdt5eXjCEiZOhDGDlyC7imhw9SB9VG8azjhitS2JjyLiL9cRfqLsQqfM9OkJhqmTgcafefWPH3muTeK-gXoy6-kkR_JeGyXL4-Xp_ZTTg-uQkruO9CKWUz-ZWTCXh_OoUpMr9Y6juJ9TMDiACANGX';
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -52,9 +55,23 @@ const computeArrTotal = function(obj){
   }
    return  newArr.reverse();
 }
+// 合并导演演员数组
+const dealDirectCasts= function(directors, casts){
+   for(var i = 0; i < directors.length; i ++){
+       directors[i]["position"] = '导演';
+   }
+  for (var j = 0;j < casts.length;j++) {
+    casts[j]["position"] = '演员';
+  }
+  return directors.concat(casts)
+}
 module.exports = {
   formatTime: formatTime,
   http:http,
   dealStar: dealStar,
-  computeArrTotal: computeArrTotal
+  computeArrTotal: computeArrTotal,
+  dealDirectCasts: dealDirectCasts,
+  appId:appId,
+  appSecret:appSecret,
+  access_token: access_token
 }

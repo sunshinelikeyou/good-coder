@@ -1,5 +1,6 @@
+<!-- 引入评分组件 -->
 <import src="/template/ratingstar/ratingstar.wxml" />
-
+<!-- 电影评分组件 -->
 <view class="movie-rating">
   <view class='rating-header'>
     <view class='rating-title'>豆瓣评分

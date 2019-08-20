@@ -17,6 +17,9 @@
   height:12rpx;
   margin-right:2rpx;
 }
+.rating-star-list-item{
+  height: 20rpx;
+}
 .rating-star-list progress{
   float:right;
   width: 300rpx;

@@ -1,7 +1,5 @@
 {
   "usingComponents":{
-    "movie-detail":"/components/moviedetail/moviedetail",
-    "movie-rating":"/components/movierating/movierating"
-  },
-  "navigationBarTitleText": "Movie Detail"
+    "movie-detail":"/components/moviedetail/moviedetail"
+  }
 }

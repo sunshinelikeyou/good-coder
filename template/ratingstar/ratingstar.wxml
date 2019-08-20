@@ -1,15 +1,17 @@
+<!-- 简易评分模板 -->
 <template name="rating-star">
 <view class='rating-star'>
   <image src="{{item ? '/image/star.png ': '/image/sch.png'}} " class="rating-star" />
 </view>
 </template>
+<!-- 图形化评分模板 -->
 <template name="rating-star-list">
   <view class="rating-star-list">
-    <view wx:for="{{rating.details}}" wx:key="index">
+    <view wx:for="{{rating.details}}" wx:key="index" class="rating-star-list-item">
     <view class='rating-star-image'>
       <image src="/image/sch.png" wx:for="{{5 - (index - 1)}}" wx:key="index" />
     </view>
-      <progress percent="{{dealDetails[index - 1]}}" color="#fea932" border-radius="2rpx" />
+      <progress percent="{{dealDetails[index - 1]}}" color="#fea932" border-radius="6rpx" />
     </view>
   </view>
 </template>

@@ -1,7 +1,8 @@
+/* 详情页样式 */
 .movie-detail{
    padding: 24rpx 30rpx;
 }
-
+/* header */
 .movie-header image{
   float: left;
   width: 210rpx;
@@ -32,4 +33,115 @@
   height: 80rpx;
   margin-top: 20rpx; 
   margin-left: 20rpx;
+}
+/* seats */
+.movie-seats{
+  margin: 60rpx 0  30rpx 0;
+  height: 48rpx;
+}
+.movie-seats text{
+  float: left;
+  font-size: 36rpx;
+  line-height: 48rpx;
+  font-weight: bold;
+}
+.movie-seats image{
+  float: right;
+  width: 12rpx;
+  height: 24rpx;
+  line-height: 48rpx;
+}
+.line{
+  height: 4rpx;
+  background: #eee;
+  margin-bottom: 40rpx;
+}
+/* channel */
+.channel{
+  height: 60rpx;
+  margin-bottom: 48rpx;
+}
+.channel-title{
+  float: left;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  margin-right: 24rpx;
+  color: #999;
+}
+.channel .tags{
+  float: left;
+  width: 500rpx;
+  height: 60rpx;
+ 
+}
+.scroll-view-tags{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  display: inline-block;
+  padding: 0 20rpx;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+  background: #634d40;
+  margin-right: 20rpx;
+  color: white;
+  font-size: 28rpx;
+}
+.scroll-view-item text{
+  margin-left:16rpx;
+}
+
+.movie-summary{
+  padding:20rpx 0;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.movie-summary .summary-text{
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 4;
+overflow: hidden;
+  padding:10rpx 0;
+  font-size: 28rpx;
+}
+.movie-summary .report{
+ text-align: right;
+  font-size: 24rpx;
+}
+.movie-casts{
+  margin-top:100rpx;
+  margin-bottom: 36rpx;
+  font-weight: bold;
+}
+.movie-casts-title{
+  height: 36rpx;
+  margin-bottom: 36rpx;
+}
+.movie-casts .role {
+  float: left;
+  height: 36rpx;
+   line-height: 36rpx;
+  font-size: 36rpx;
+}
+.movie-casts .role-count{
+    float:right;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    overflow: hidden;
+}
+.sroll-item-directCasts{
+  width: 160rpx;
+  margin-right:30rpx;
+  flex: 1;
+}
+.sroll-item-directCasts .scroll-image  {
+   width: 160rpx;
+   height: 240rpx;
+   border-radius: 10rpx;
+}
+.movie-avatars .name{
+  font-size: 24rpx;
+}
+.movie-avatars .position{
+  font-size: 20rpx;
 }

@@ -26,6 +26,9 @@ Page({
         }); 
     },
     sendMovie(e){
-      console.log(e);
+      const value = e.detail.value;
+      if(value){
+        this.triggerEvent('search',value)
+      }
     }
 });

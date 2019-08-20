@@ -1,19 +1,76 @@
 <!--components/moviedetail/moviedetail.wxml-->
-<wxs module="tool" src="../../utils/tool.wxs"/>
+<!-- 引入 工具文件 -->
+<wxs module="tool" src="../../utils/tool.wxs" />
+<!-- 电影详情页 -->
 <view class='movie-detail'>
-   <view class='movie-header'>
-       <image  src='{{ movie.movieImgSrc }}'/>
-       <view class='movie-info'>
-          <view class='movie-title'>{{ movie.title }}</view>
-          <view class='movie-originalTitle'>{{ movie.originalTitle }}</view>
-          <view class='movie-detail-info'>
-          <text class='movie-countries' wx:for="{{ movie.countries}}" wx:key="index">{{ tool.stringEndWith(item) }}</text>
-          <text class='movie-genres' wx:for="{{ movie.genres  }}" wx:key="index">{{ tool.stringEndWith(item)  }}</text>
-          <text class='movie-pubdates' wx:for="{{ movie.pubdates }}" wx:key="index">上映时间: {{ tool.stringEndWith(item) }}</text> 
-          <text class='movie-durations'>片长: {{ movie.durations }}</text> 
+  <!-- 详情页头部 -->
+  <view class='movie-header'>
+    <image src='{{ movie.movieImgSrc }}' />
+    <view class='movie-info'>
+      <view class='movie-title'>{{ movie.title }}</view>
+      <view class='movie-originalTitle'>{{ movie.originalTitle }}</view>
+      <view class='movie-detail-info'>
+        <text class='movie-countries' wx:for="{{ movie.countries}}" wx:key="index">{{ tool.stringEndWith(item) }}</text>
+        <text class='movie-genres' wx:for="{{ movie.genres  }}" wx:key="index">{{ tool.stringEndWith(item)  }}</text>
+        <text class='movie-pubdates' wx:for="{{ movie.pubdates }}" wx:key="index">上映时间: {{ tool.stringEndWith(item) }}</text>
+        <text class='movie-durations'>片长: {{ movie.durations }}</text>
+      </view>
+      <image src='/image/want-watch.png'></image>
+      <image src='/image/watched.png'></image>
+    </view>
+  </view>
+  <!-- 评星组件 -->
+  <movie-rating movie="{{movie}}" />
+  <!-- 选座购票 -->
+  <view class='movie-seats'>
+    <text>选座购票</text>
+    <image src='/image/arrow-right.png'></image>
+  </view>
+  <view class='line'></view>
+  <!-- 所属频道 -->
+  <view class='channel'>
+    <text class='channel-title'>所属频道</text>
+    <view class='tags'>
+      <!-- movie.directCasts  数据未处理 -->
+      <scroll-view class="scroll-view-tags" scroll-x style="width: 100%">
+        <block wx:for="{{ movie.tags }}" wx:key="index">
+          <view class="scroll-view-item">{{ item }}
+            <text>></text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view class='movie-summary'>
+    <view class='title'>简介</view>
+    <view class='summary-text'>{{ movie.summary }}</view>
+    <view class='report'>举报简介</view>
+  </view>
+  <!-- 演职员 -->
+  <view class='movie-casts'>
+    <view class='movie-casts-title'>
+      <text class='role'>演职员</text>
+      <text class='role-count'>全部 45</text>
+    </view>
+    <view>
+      <!-- movie.directCasts  数据未处理 -->
+      <scroll-view scroll-x>
+        <view style='display:flex;flex-direaction:row' class='directCasts'>
+          <block wx:for="{{movie.directCasts}}" wx:key="index">
+            <view class='sroll-item-directCasts'>
+              <image src="{{item.avatars.large}}" class="scroll-image" />
+              <view class='movie-avatars'>
+                <view class='name'>{{ item.name }}</view>
+                <view class='position'>{{ item.position }}</view>
+              </view>
             </view>
-          <image src='/image/want-watch.png'></image>
-          <image src='/image/watched.png'></image>
-       </view>
-   </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 预告片/剧照 -->
+  <view>预告片/剧照</view>
+  
 </view>
